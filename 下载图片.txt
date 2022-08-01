@@ -1,0 +1,12 @@
+# 导入模块
+import requests
+
+# 下载图片地址
+url = "https://profile.csdnimg.cn/2/0/B/3_u011282394" # 填上要爬取的图片地址
+
+# 发送请求获取响应
+response = requests.get(url)
+
+# 保存图片
+with open('image.png','wb') as f:
+  f.write(response.content)
